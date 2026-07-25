@@ -1,4 +1,4 @@
-// Cache DOM elements
+// Cache DOM element
 const magicBtn = document.getElementById('magic-btn');
 const canvas = document.getElementById('celebration-canvas');
 const ctx = canvas.getContext('2d');
