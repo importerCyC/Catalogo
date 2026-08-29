@@ -1,0 +1,522 @@
+/* ===========================
+   Variables y Reset
+=========================== */
+:root {
+    --accent: #facc15;
+    --accent-dark: #d97706;
+    --primary: #2563eb;
+    --bg-card: rgba(10, 18, 40, 0.72);
+    --bg-card-hover: rgba(10, 18, 40, 0.88);
+    --border: rgba(250, 204, 21, 0.22);
+    --text: #f1f5f9;
+    --text-muted: #94a3b8;
+    --font-head: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --header-h: 72px;
+    --radius: 16px;
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text);
+    min-height: 100vh;
+    background-image: url('img/lenovo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* ===========================
+   Overlay de fondo
+=========================== */
+.bg-overlay {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at top, rgba(10, 18, 40, 0.55) 0%, rgba(5, 10, 25, 0.88) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--header-h);
+    background: rgba(8, 15, 35, 0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.header-inner {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Logo */
+.logo-link {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 48px;
+    width: 48px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-logo:hover {
+    transform: scale(1.08) rotate(4deg);
+    box-shadow: 0 0 18px rgba(250, 204, 21, 0.65);
+}
+
+/* Título */
+.site-title {
+    font-family: var(--font-head);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    background: linear-gradient(120deg, #fff 40%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ===========================
+   Dropdown Categoría
+=========================== */
+.cat-dropdown {
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* ===========================
+   Botón Ofertas
+=========================== */
+.ofertas-btn {
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    border: none;
+    padding: 0.55rem 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: 0 4px 14px rgba(239, 68, 68, 0.45);
+    transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    user-select: none;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ofertas-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(106, 105, 105, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.ofertas-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(239, 68, 68, 0.6);
+}
+
+.ofertas-btn.active {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ef4444 100%);
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.35), 0 6px 22px rgba(239, 68, 68, 0.55);
+    animation: ofertasPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes ofertasPulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.35), 0 6px 22px rgba(239, 68, 68, 0.55);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px rgba(239, 68, 68, 0.18), 0 8px 28px rgba(239, 68, 68, 0.65);
+    }
+}
+
+/* ===========================
+   Banner de Ofertas
+=========================== */
+.ofertas-banner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.18) 0%, rgba(220, 38, 38, 0.08) 100%);
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.5rem;
+    margin-bottom: 1.75rem;
+    backdrop-filter: blur(12px);
+    animation: fadeIn 0.4s ease;
+}
+
+.ofertas-banner-icon {
+    font-size: 2.4rem;
+    line-height: 1;
+    animation: flamePulse 1s ease-in-out infinite alternate;
+    flex-shrink: 0;
+}
+
+@keyframes flamePulse {
+    from {
+        transform: scale(1) rotate(-4deg);
+    }
+
+    to {
+        transform: scale(1.12) rotate(4deg);
+    }
+}
+
+.ofertas-banner-title {
+    font-family: var(--font-head);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #f87171;
+    margin-bottom: 0.2rem;
+}
+
+.ofertas-banner-sub {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.cat-btn {
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0f172a;
+    background: var(--accent);
+    border: none;
+    padding: 0.55rem 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    box-shadow: 0 4px 14px rgba(250, 204, 21, 0.4);
+    transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+    user-select: none;
+}
+
+.cat-btn:hover {
+    background: #fde047;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(250, 204, 21, 0.55);
+}
+
+.cat-btn .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.cat-btn.open .arrow {
+    transform: rotate(180deg);
+}
+
+/* Menú desplegable */
+.cat-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: rgba(10, 18, 42, 0.95);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    list-style: none;
+    min-width: 170px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(16px);
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+    pointer-events: none;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.cat-menu.open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: all;
+}
+
+.cat-item {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    padding: 0.75rem 1.25rem;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cat-item:hover {
+    background: rgba(250, 204, 21, 0.12);
+}
+
+.cat-item.active {
+    color: var(--accent);
+    font-weight: 600;
+    background: rgba(250, 204, 21, 0.08);
+}
+
+/* ===========================
+   CONTENIDO PRINCIPAL
+=========================== */
+.main-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+
+.cat-label-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.cat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    animation: fadeIn 0.4s ease;
+}
+
+.cat-label strong {
+    color: var(--accent);
+}
+
+/* ===========================
+   Grid de Productos
+=========================== */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Tarjeta de producto */
+.product-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s;
+    animation: cardIn 0.4s ease both;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55), 0 0 20px rgba(250, 204, 21, 0.12);
+    border-color: rgba(250, 204, 21, 0.4);
+    background: var(--bg-card-hover);
+}
+
+.product-img-wrapper {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.06);
+}
+
+.product-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.product-cat-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    background: rgba(250, 204, 21, 0.1);
+    border: 1px solid rgba(250, 204, 21, 0.25);
+    border-radius: 50px;
+    padding: 0.15rem 0.6rem;
+    align-self: flex-start;
+}
+
+.product-name {
+    font-family: var(--font-head);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.3;
+}
+
+.product-desc {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.product-price {
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #4ade80;
+    margin-top: 0.25rem;
+}
+
+.product-price--oferta {
+    color: #f87171;
+}
+
+.product-price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.25rem;
+}
+
+.product-price-old {
+    font-family: var(--font-head);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+/* Badge de descuento sobre la imagen */
+.oferta-badge {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    z-index: 2;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: #fff;
+    font-family: var(--font-head);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 50px;
+    box-shadow: 0 3px 10px rgba(239, 68, 68, 0.5);
+    letter-spacing: 0.03em;
+}
+
+/* Tarjeta en modo oferta: borde rojo sutil */
+.product-card--oferta {
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.product-card--oferta:hover {
+    border-color: rgba(239, 68, 68, 0.6);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55), 0 0 20px rgba(239, 68, 68, 0.18);
+}
+
+.empty-msg {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 4rem 1rem;
+    font-size: 1.1rem;
+    animation: fadeIn 0.4s ease;
+}
+
+/* ===========================
+   Animaciones
+=========================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 600px) {
+    .site-title {
+        font-size: 1rem;
+    }
+
+    .cat-btn {
+        padding: 0.45rem 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 1rem;
+    }
+}
