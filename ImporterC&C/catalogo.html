@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo — IMPORTADORA C&C</title>
+    <meta name="description" content="Catálogo de productos de Importadora C&C. Cocina, Juguetes y más.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="catalogo.css">
+</head>
+
+<body>
+
+    <!-- Fondo oscuro sobre la imagen -->
+    <div class="bg-overlay"></div>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <!-- Logo -->
+            <a href="index.html" class="logo-link" aria-label="Ir al inicio">
+                <img src="img/lenovolegio1.jpg" alt="Logo Importadora C&C" class="header-logo">
+            </a>
+
+            <!-- Título -->
+            <h1 class="site-title">CATALOGO</h1>
+
+            <!-- Botón Categoría -->
+            <div class="cat-dropdown" id="cat-dropdown">
+                <button class="cat-btn" id="cat-btn" aria-haspopup="true" aria-expanded="false">
+                    Categoría <span class="arrow">▾</span>
+                </button>
+                <ul class="cat-menu" id="cat-menu" role="menu">
+                    <li><button class="cat-item active" data-cat="Todos" role="menuitem">🏠 Todos</button></li>
+                    <li><button class="cat-item" data-cat="Cocina" role="menuitem">🍳 Cocina</button></li>
+                    <li><button class="cat-item" data-cat="Juguetes" role="menuitem">🧸 Juguetes</button></li>
+                    <li><button class="cat-item" data-cat="ferreteria" role="menuitem">🔧 Ferreteria</button></li>
+                    <li><button class="cat-item" data-cat="Baños y limpieza" role="menuitem">🪮 baño y limpieza</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Botón Ofertas -->
+            <button class="ofertas-btn" id="ofertas-btn" aria-pressed="false">
+                🔥 Ofertas
+            </button>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+        <!-- Banner de Ofertas (visible solo cuando se activa la vista de ofertas) -->
+        <div class="ofertas-banner" id="ofertas-banner" style="display:none;">
+            <span class="ofertas-banner-icon">🔥</span>
+            <div>
+                <h2 class="ofertas-banner-title">LOCO OFERTAS</h2>
+                <p class="ofertas-banner-sub">Productos seleccionados con precios increíbles — ¡solo por tiempo
+                    limitado!</p>
+            </div>
+        </div>
+
+        <!-- Etiqueta de categoría activa -->
+        <div class="cat-label-wrapper">
+            <p class="cat-label" id="cat-label">Mostrando: <strong>Todos los productos</strong></p>
+        </div>
+
+        <!-- Grid de productos -->
+        <section class="product-grid" id="product-grid" aria-label="Catálogo de productos">
+            <!-- Los productos se insertan aquí por JavaScript -->
+        </section>
+
+        <!-- Mensaje cuando no hay productos -->
+        <div class="empty-msg" id="empty-msg" style="display:none;">
+            <p>😕 No hay productos en esta categoría por el momento.</p>
+        </div>
+
+    </main>
+
+    <!-- 1º Datos de productos (edita este archivo para añadir/quitar) -->
+    <script src="productos.js"></script>
+    <!-- 2º Lógica del catálogo -->
+    <script src="catalogo.js"></script>
+</body>
+
+</html>
