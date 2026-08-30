@@ -134,7 +134,7 @@ const PRODUCTOS = [
   },
   {
     id: 12,
-    nombre: "Rauradora ",
+    nombre: "Rasuradora ",
     categoria: "--",
     precio: 89,
     imagen: "img/jjjj.webp",
