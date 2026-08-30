@@ -182,4 +182,244 @@ const PRODUCTOS = [
     disponible: true,
     oferta: true
   },
+  {
+    id: 17,
+    nombre: "Cascada de chocolate",
+    categoria: "--",
+    precio: 95,
+    imagen: "img/jjjj.webp",
+    descripcion: "Cascada de chocolate",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 18,
+    nombre: "Horno microondas",
+    categoria: "--",
+    precio: 1150,
+    imagen: "img/jjjj.webp",
+    descripcion: "Es horno y mricoondas PREMIER 1año de garantia",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 19,
+    nombre: "Sofacama",
+    categoria: "--",
+    precio: 195,
+    imagen: "img/jjjj.webp",
+    descripcion: "Sofacama para niños",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 20,
+    nombre: "Rosera",
+    categoria: "--",
+    precio: 225,
+    imagen: "img/jjjj.webp",
+    descripcion: "Rosera de 700W producto Aleman",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 21,
+    nombre: "Tazas removedoras",
+    categoria: "--",
+    precio: 53,
+    imagen: "img/jjjj.webp",
+    descripcion: "Taza removedora de tes",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 22,
+    nombre: "Huevera calentadora",
+    categoria: "--",
+    precio: 110,
+    imagen: "img/jjjj.webp",
+    descripcion: "Huevera calentadora ",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 23,
+    nombre: "Asiento plegable",
+    categoria: "--",
+    precio: 59,
+    imagen: "img/jjjj.webp",
+    descripcion: "Asiento plegable de un gancho",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 24,
+    nombre: "Afeitadora con su rasuradora",
+    categoria: "--",
+    precio: 80,
+    imagen: "img/jjjj.webp",
+    descripcion: "Afeitadora con su rasuradora totalmente metalico",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 25,
+    nombre: "Vasin para niños",
+    categoria: "--",
+    precio: 129,
+    imagen: "img/jjjj.webp",
+    descripcion: "Vasin para niños de diferentes modelos",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 26,
+    nombre: "Kit de toallas",
+    categoria: "--",
+    precio: 59,
+    imagen: "img/jjjj.webp",
+    descripcion: "Kit de toallas viene 3 en 1",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 27,
+    nombre: "Glitter metalico de 24 pcs",
+    categoria: "--",
+    precio: 40,
+    imagen: "img/jjjj.webp",
+    descripcion: "Glitter metalico de 24 pcs",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 28,
+    nombre: "Exprimidor de naranja",
+    categoria: "--",
+    precio: 399,
+    imagen: "img/jjjj.webp",
+    descripcion: "Exprimidor de naranja de la marca MAJE FESA",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 29,
+    nombre: "Sillon inflable",
+    categoria: "--",
+    precio: 140,
+    imagen: "img/jjjj.webp",
+    descripcion: "Sillon inflable de varios colores",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 30,
+    nombre: "Ensaladera de vidrio",
+    categoria: "--",
+    precio: 75,
+    imagen: "img/jjjj.webp",
+    descripcion: "Ensaladera de vidrio",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 31,
+    nombre: "Ojitos para auto Grande",
+    categoria: "--",
+    precio: 75,
+    imagen: "img/jjjj.webp",
+    descripcion: "Ojos para auto grande con su sonrisa",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 32,
+    nombre: "Ojitos para auto medianos",
+    categoria: "--",
+    precio: 75,
+    imagen: "img/jjjj.webp",
+    descripcion: "Ojos para auto medianos con su sonrisa",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 33,
+    nombre: "Ojitos para auto pequeños",
+    categoria: "--",
+    precio: 40,
+    imagen: "img/jjjj.webp",
+    descripcion: "Ojos para auto pequeños",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 34,
+    nombre: "Parlante Tita",
+    categoria: "--",
+    precio: 70,
+    imagen: "img/jjjj.webp",
+    descripcion: "Parlante de la marca TITA",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 35,
+    nombre: "Parlante Demgel",
+    categoria: "--",
+    precio: 75,
+    imagen: "img/jjjj.webp",
+    descripcion: "Parlante de la marca Demgel",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 36,
+    nombre: "Piso plegable pequeño",
+    categoria: "--",
+    precio: 120,
+    imagen: "img/jjjj.webp",
+    descripcion: "Pisos plegables para bebes, pequeños",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 37,
+    nombre: "Piso plegable grande",
+    categoria: "--",
+    precio: 145,
+    imagen: "img/jjjj.webp",
+    descripcion: "Pisos plegables para bebes, grandes",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 38,
+    nombre: "Licuadora ICE CRUSHER",
+    categoria: "--",
+    precio: 155,
+    imagen: "img/jjjj.webp",
+    descripcion: "Licuadora de vidrio pica hielo",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 39,
+    nombre: "Estufa GAMEY X30",
+    categoria: "--",
+    precio: 99,
+    imagen: "img/jjjj.webp",
+    descripcion: "Estufa gamey X30 de 800W",
+    disponible: true,
+    oferta: true
+  },
+  {
+    id: 40,
+    nombre: "Sillon inflable",
+    categoria: "--",
+    precio: 185,
+    imagen: "img/jjjj.webp",
+    descripcion: "Sillon inflable con su reposapies",
+    disponible: true,
+    oferta: true
+  },
 ];
